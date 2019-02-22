@@ -1,0 +1,69 @@
+<!Author: Jared Hanlon
+ Date: 2/14/2019
+ Comments: This HTML website application code demonstrates the use of 
+           formatting, css files, forms, images and buttons after getting 
+		   input from users.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Customer Information</TITLE>
+<STYLE>
+	body 
+	    {
+	    background-color: gray;
+	    }
+	h1   
+	    {
+	    color: pink;
+		font-family: verdana;
+        font-size: 300%
+        }
+	p	 
+	    {
+	    color: white;
+        font-family: courier;
+        font-size: 160%;
+        }
+	    form
+	    {
+        color: white;
+        font-family: courier;
+        font-size: 160%;
+	    }
+</STYLE>
+<SCRIPT>
+<!-- This is JavaScript. Lines 40-43 validate user input -->
+	function validateForm()
+	{
+		var x = document.forms["myForm"]["firstname"].value;
+		if (x == "")
+		{
+		  alert ("First name must be filled out");
+		  return false;
+		}
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+	<h1>Customer Information</h1>
+	<p>Hello, valued customer!</p>
+	<p>Please enter your information in the spaces provided.</p>	
+	
+<!-- This is the form -->	
+	<form name="myForm" onsubmit="return validateForm()">
+    <fieldset>    
+    First name:<br>
+    <input type="text" name="firstname" value="">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname"  value="">
+    <br>
+	 Email:<br>
+    <input type="text" name="email"     value="">
+    <br><br>
+    <input type="submit" value="Submit">
+	<img src="porg.jpg" alt="Porg" width="170" height="170"
+    </fieldset>
+</BODY>
+</HTML>
